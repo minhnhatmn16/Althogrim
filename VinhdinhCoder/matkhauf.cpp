@@ -7,17 +7,17 @@ int main(){
     cout.tie(NULL);
 
 // #ifndef ONLINE_JUDGE
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
+    freopen("matkhauf.inp", "r", stdin);
+    freopen("matkhauf.out", "w", stdout);
 // #endif
 
     string s;
-    cin>>s;
+    getline(cin,s);
     vector<int> v1,v2,v3;
     for (int i=0; i<s.size(); i++)
     if ('A'<=s[i] && s[i]<='Z') v1.push_back(i); else 
     if ('a'<=s[i] && s[i]<='z') v2.push_back(i); else 
-    v3.push_back(i);
+    if ('0'<=s[i] && s[i]<='9') v3.push_back(i);
 
 
     long long res=0;
@@ -37,3 +37,4 @@ int main(){
     }
     cout<<res;
 }
+    
